@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Editor Rápido de Fin de Semana</title>
+<title>EdiFot</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
@@ -282,6 +282,8 @@ select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(139,92,246,.2)
 .sticker-custom::after{content:'★';position:absolute;top:2px;right:5px;font-size:10px;color:#facc15;text-shadow:0 1px 2px rgba(0,0,0,.9);pointer-events:none}
 .delete-sticker{position:absolute;top:-6px;left:-6px;width:18px;height:18px;border-radius:50%;background:var(--red);color:white;border:none;font-size:12px;line-height:16px;cursor:pointer;display:none;align-items:center;justify-content:center;padding:0;z-index:2}
 .sticker-custom:hover .delete-sticker{display:flex}
+a{ 
+border-radius:12px }
 </style>
 
 <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIkVkaXRvciBSXHUwMGUxcGlkbyBkZSBGaW4gZGUgU2VtYW5hIiwgInNob3J0X25hbWUiOiAiRWRpdG9yRm90b3MiLCAiZGVzY3JpcHRpb24iOiAiUmVjb3J0YSwgcG9ubGUgbGV0cmFzLCBmaWx0cm9zIHkgdHVzIHN0aWNrZXJzIiwgInN0YXJ0X3VybCI6ICIuLyIsICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLCAiYmFja2dyb3VuZF9jb2xvciI6ICIjMGYwZjEwIiwgInRoZW1lX2NvbG9yIjogIiMwZjBmMTAiLCAiaWNvbnMiOiBbeyJzcmMiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNpSUhacFpYZENiM2c5SWpBZ01DQTFNVElnTlRFeUlqNDhjbVZqZENCM2FXUjBhRDBpTlRFeUlpQm9aV2xuYUhROUlqVXhNaUlnY25nOUlqRXdNQ0lnWm1sc2JEMGlJekJtTUdZeE1DSXZQangwWlhoMElIZzlJalV3SlNJZ2VUMGlOVFVsSWlCbWIyNTBMWE5wZW1VOUlqSTRNQ0lnZEdWNGRDMWhibU5vYjNJOUltMXBaR1JzWlNJZ1ptbHNiRDBpZDJocGRHVWlJR1p2Ym5RdFptRnRhV3g1UFNKQmNtbGhiQ0krOEorVHVEd3ZkR1Y0ZEQ0OEwzTjJaejQ9IiwgInNpemVzIjogIjUxMng1MTIiLCAidHlwZSI6ICJpbWFnZS9zdmcreG1sIiwgInB1cnBvc2UiOiAiYW55IG1hc2thYmxlIn1dfQ==">
@@ -304,7 +306,7 @@ if('serviceWorker' in navigator) {
 <body>
 <div class="app">
   <header>
-    <h1>Editor Rápido de Fin de Semana</h1>
+    <h1>EdiFot</h1>
     <p>Recorta, ponle letras, stickers y filtros</p>
   </header>
 
@@ -443,9 +445,9 @@ if('serviceWorker' in navigator) {
   <div class="action-bar">
     <button id="btn-reset">Reiniciar</button>
     <button id="btn-download">Descargar PNG</button>
+    <a href="sticker_IA.html" id="btn-download"><button id="btn-download">generar sticker</button>
   </div>
 </div>
-
 <input type="file" id="fileInput" accept="image/*" hidden>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js"></script>
